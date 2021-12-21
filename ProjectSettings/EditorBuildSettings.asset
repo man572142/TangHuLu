@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Entrance Scene.unity
+    guid: 0e1cb3278c8c6f541a4d915a577e8d8c
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: dcc5a8a6a8240884f8115f899674c9dc
+  - enabled: 1
+    path: Assets/Scenes/DowntownStreet.unity
+    guid: d206d419f32653449aa7b81e1e04e62f
+  - enabled: 1
+    path: Assets/Scenes/Market.unity
+    guid: 2b73c7b240ed9da4bab314e95258665e
+  - enabled: 1
+    path: Assets/Scenes/NightMarket.unity
+    guid: 2cf99f502e8ab0644bc685739f810668
+  - enabled: 1
+    path: Assets/Scenes/Temple.unity
+    guid: 4fc5b08b40506324291484d84d354bef
+  - enabled: 1
+    path: Assets/Scenes/RainStreet.unity
+    guid: 602274413ccf7264cb9862460b19df6f
+  m_configObjects: {}

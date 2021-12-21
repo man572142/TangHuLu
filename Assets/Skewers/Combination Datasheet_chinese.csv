@@ -1,0 +1,25 @@
+Title,Chinese Title,FoodType,,,,,,Price,Popularity
+Classic3Straw,經典3顆草莓,Strawberry,Strawberry,Strawberry,,,,25,10
+Classic4Straw,經典4顆草莓,Strawberry,Strawberry,Strawberry,Strawberry,,,30,20
+Classic5Straw,經典5顆草莓,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,,35,25
+Classic6Straw,經典6顆草莓,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,40,20
+Classic3Tomato,經典3顆番茄,Tomato,Tomato,Tomato,,,,20,7
+Classic4Tomato,經典4顆番茄,Tomato,Tomato,Tomato,Tomato,,,25,15
+Classic5Tomato,經典5顆番茄,Tomato,Tomato,Tomato,Tomato,Tomato,,30,20
+Classic6Tomato,經典6顆番茄,Tomato,Tomato,Tomato,Tomato,Tomato,Tomato,35,17
+Classic3Plum,經典3顆烏梨,Plum,Plum,Plum,,,,20,10
+Classic4Plum,經典4顆烏梨,Plum,Plum,Plum,Plum,,,25,15
+Classic5Plum,經典5顆烏梨,Plum,Plum,Plum,Plum,Plum,,30,15
+Classic6Plum,經典6顆烏梨,Plum,Plum,Plum,Plum,Plum,Plum,35,10
+Half4ST,草莓/番茄 各半,Strawberry,Strawberry,Tomato,Tomato,,,30,23
+Half4SP,草莓/烏梨 各半,Strawberry,Strawberry,Plum,Plum,,,25,17
+Half4TP,烏梨/番茄 各半,Tomato,Tomato,Plum,Plum,,,20,13
+Half6ST,草莓/番茄 各半,Strawberry,Strawberry,Strawberry,Tomato,Tomato,Tomato,40,18
+Half6SP,草莓/烏梨 各半,Strawberry,Strawberry,Strawberry,Plum,Plum,Plum,35,18
+Half6TP,烏梨/番茄 各半,Tomato,Tomato,Tomato,Plum,Plum,Plum,35,13
+Twist5TS,草莓/番茄 交錯,Tomato,Strawberry,Tomato,Strawberry,Tomato,,40,23
+Twist5TP,烏梨/番茄 交錯,Tomato,Plum,Tomato,Plum,Tomato,,35,20
+Twist5SP,草莓/烏梨 交錯,Plum,Strawberry,Plum,Strawberry,Plum,,35,20
+Twist6TS,草莓/番茄 交錯,Strawberry,Tomato,Strawberry,Tomato,Strawberry,Tomato,45,20
+Twist6TP,烏梨/番茄 交錯,Tomato,Plum,Tomato,Plum,Tomato,Plum,40,20
+Twist6SP,草莓/烏梨 交錯,Strawberry,Plum,Strawberry,Plum,Strawberry,Plum,40,15

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5932146797558926907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5932146797558926885}
+  - component: {fileID: 5932146797558926906}
+  m_Layer: 0
+  m_Name: Food Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5932146797558926885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932146797558926907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5932146797558926906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932146797558926907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edd911990197b44bb724ba161e5b910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xLength: 63
+  yLength: 35
+  spawnRate: 0.5
+  foodPrefab:
+  - {fileID: 564801548002847544, guid: ed61e504d1b1bed4e90549df6f22d5eb, type: 3}
+  - {fileID: 1387251182071232487, guid: a17047b8df61320498a68eaf866803db, type: 3}
+  - {fileID: 8849336938497742212, guid: 3a1ee09ff4e5df74aae98272de2fe544, type: 3}
+  funtionalFood:
+  - {fileID: 1147798014365986583, guid: 4ceb549ed1db13848b319118a791b065, type: 3}
+  - {fileID: 5633808755838495810, guid: 0236ceed50e48b44488c67fbfa0487ff, type: 3}
+  - {fileID: 1896316294633738165, guid: bb00b2827f358464aa044227ade9cbdb, type: 3}
+  - {fileID: 2845887240404754368, guid: 724735c105a79924c834b54b4772791d, type: 3}
+  funRate: 10
+  maxFoodAmount: 50
+  player: {fileID: 0}
+  spawnMinimumDistance: 2
+  skewers: {fileID: 0}
