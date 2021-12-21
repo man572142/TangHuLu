@@ -8,22 +8,24 @@ using TMPro;
 public class Stock : MonoBehaviour
 {
     [SerializeField] int maxLeaderBoardShowing = 5;
+    /// <summary>現貨糖葫蘆</summary>
     List<CombinationData> combinations = new List<CombinationData>();
     public List<CombinationData> Combinations { get { return combinations; } }
     
-    public void ShowStock(CombinationData newFlavor)
+    public void ShowStock(CombinationData newFlavor) 
     {
-        for(int i = 0; i < combinations.Count; i++)  //如果一個口味都沒有,就不會執行
+        //確認整個List是否已有相同口味,有的話需確認排名,更新顯示位置
+        for (int i = 0; i < combinations.Count; i++) 
         {
             CombinationData inStock = combinations[i];
-            if(inStock.title == newFlavor.title)  //確認整個List(榜內榜外)是否已有相同口味,有的話需確認排名,更新位置
+            if(inStock.title == newFlavor.title)  
             {
                 CheckRanking();
                 return;
             }
         }
 
-        if(combinations.Count < 5 )
+        if(combinations.Count < 5 )  //如果現貨無此新口味，並且種類不到五個,直接加入清單並排入榜上
         {
             combinations.Add(newFlavor);
             SetPosition();

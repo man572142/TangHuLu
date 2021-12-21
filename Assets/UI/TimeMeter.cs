@@ -13,9 +13,10 @@ public class TimeMeter : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject system;
     [SerializeField] GameObject endMusic;
-    bool stop = false;
+    bool endGame = false;
     float timer = 0;
     [SerializeField] LevelSetting levelSetting;
+    [SerializeField] Hint hint;
 
     bool quarter = false;
     bool half = false;
@@ -27,34 +28,37 @@ public class TimeMeter : MonoBehaviour
     private void Start()
     {
         slider = GetComponent<Slider>();
+        money = GetComponent<Money>();
         slider.value = 0f;
     }
 
     private void Update()
     {
+        if (endGame) return;
+
         timer += Time.deltaTime;
         if(timer < timeLimited && timer > 0)
         {
             slider.value = timer / timeLimited;
         }
-        else if(timer >= timeLimited  && !stop)
+        else if(timer >= timeLimited)
         {
-            money.GetComponent<Money>().FinalSettlement();
+            money.FinalSettlement();
             whiteBoard.SetActive(true);
             player.gameObject.SetActive(false);
             system.gameObject.SetActive(false);
             endMusic.gameObject.SetActive(true);
-            stop = true;
+            endGame = true;
 
         }
 
-        if (timer >= timeLimited * 4 / 5 && !isClosing) { FindObjectOfType<Hint>().Message("即將打烊"); isClosing = true; }
+        if (timer >= timeLimited * 4 / 5 && !isClosing) { hint.Message("即將打烊"); isClosing = true; }
         else if (timer >= timeLimited * 3 / 4 && !threeQuarter) { sales.SalesRanking(); threeQuarter = true; }
-        else if (timer >= timeLimited / 2 && !half) { FindObjectOfType<Hint>().Message("營業時間已過了一半"); half = true; }
+        else if (timer >= timeLimited / 2 && !half) { hint.Message("營業時間已過了一半"); half = true; }
         else if (timer >= timeLimited / 4 && !quarter) { sales.SalesRanking(); quarter = true; }
         else if (timer >= timeLimited / 10 && !ten) 
         { 
-            FindObjectOfType<Hint>().Message("我想這裡的人應該會比較喜歡 " + levelSetting.LevelRespond() + " 或 " + levelSetting.LevelRespond());
+            hint.Message("我想這裡的人應該會比較喜歡 " + levelSetting.LevelRespond() + " 或 " + levelSetting.LevelRespond());
             ten = true;
         }
     }

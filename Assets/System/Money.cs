@@ -9,6 +9,7 @@ public class Money : MonoBehaviour
     [SerializeField] int startingMoney = 500;
     int currentMoney;
     TextMeshProUGUI text;
+    /// <summary>不同方向角度的鈔票圖案</summary>
     [SerializeField] RectTransform[] cash;
     [SerializeField] Vector2 cashPosition = new Vector2(-100, 0);
     [SerializeField] float timeBeforeCashDestroy = 2f;

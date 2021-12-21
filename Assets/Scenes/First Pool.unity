@@ -2859,6 +2859,10 @@ PrefabInstance:
       propertyPath: forSale
       value: 
       objectReference: {fileID: 642425374}
+    - target: {fileID: 5219894197776136541, guid: e51570e1bda29304a9a06fbc653a446e, type: 3}
+      propertyPath: stock
+      value: 
+      objectReference: {fileID: 1738796918}
     - target: {fileID: 5219894197776136542, guid: e51570e1bda29304a9a06fbc653a446e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3017,6 +3021,10 @@ PrefabInstance:
       propertyPath: characters
       value: 
       objectReference: {fileID: 755511683}
+    - target: {fileID: 5481364534560740432, guid: 325b275946176e64a95d07ac8e054a2e, type: 3}
+      propertyPath: textUI
+      value: 
+      objectReference: {fileID: 5481364535209632763}
     - target: {fileID: 5481364534560740433, guid: 325b275946176e64a95d07ac8e054a2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3131,6 +3139,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 325b275946176e64a95d07ac8e054a2e, type: 3}
+--- !u!114 &5481364535209632762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5481364534560740432, guid: 325b275946176e64a95d07ac8e054a2e, type: 3}
+  m_PrefabInstance: {fileID: 5481364535209632761}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b65450a9b494145b9da09df225c822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5481364535209632763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5481364534959224896, guid: 325b275946176e64a95d07ac8e054a2e, type: 3}
+  m_PrefabInstance: {fileID: 5481364535209632761}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5730968641427751952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3531,6 +3561,10 @@ PrefabInstance:
       propertyPath: levelSetting
       value: 
       objectReference: {fileID: 24244442}
+    - target: {fileID: 8845203855161105846, guid: 75517ebd3689123448ea71befc3a5365, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 5481364535209632762}
     - target: {fileID: 8845203855161105847, guid: 75517ebd3689123448ea71befc3a5365, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

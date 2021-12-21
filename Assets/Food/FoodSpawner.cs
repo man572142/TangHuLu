@@ -12,12 +12,14 @@ public class FoodSpawner : MonoBehaviour
     [SerializeField] GameObject[] foodPrefab;
     [SerializeField] GameObject[] funtionalFood;
     [SerializeField] float funRate = 15f;
-
+    /// <summary>食物種類數 </summary>
     int foodLength;
+    /// <summary>功能性食物種類數 </summary>
     int funLength;
+    /// <summary>整個場上最多可容納多少食物 </summary>
     [SerializeField] int maxFoodAmount = 30;
     bool isSpawning = true;
-    bool isFun = true;
+    bool isSpawningFunFood = true;
     [SerializeField] Player player;
     [SerializeField] float spawnMinimumDistance = 2f;
     [SerializeField] Skewers skewers;
@@ -36,7 +38,7 @@ public class FoodSpawner : MonoBehaviour
         {
             StartCoroutine(Spawner());
         }
-        if(transform.childCount <= maxFoodAmount && !isFun)
+        if(transform.childCount <= maxFoodAmount && !isSpawningFunFood)
         {
             StartCoroutine(FuntionalSpawner());
         }
@@ -47,6 +49,7 @@ public class FoodSpawner : MonoBehaviour
     {
         while(transform.childCount <= maxFoodAmount)
         {
+            isSpawning = true;
             int foodIndex = Random.Range(0, foodLength);  //random不包含最大值
             float newX = Random.Range(-xLength / 2, xLength / 2);
             float newY = Random.Range(-yLength / 2, yLength / 2);
@@ -56,7 +59,7 @@ public class FoodSpawner : MonoBehaviour
             GameObject newFood = Instantiate(foodPrefab[foodIndex], position, Quaternion.identity);
             newFood.transform.parent = transform;
             yield return new WaitForSeconds(spawnRate);
-            isSpawning = true;
+
         }
         isSpawning = false;   //food超過maxFoodAmount停止整個while迴圈，交由Update繼續追蹤food數量
     }
@@ -66,11 +69,12 @@ public class FoodSpawner : MonoBehaviour
 
         while (transform.childCount <= maxFoodAmount)
         {
-            isFun = true;
+            isSpawningFunFood = true;
             yield return new WaitForSeconds(funRate);            
             
             int index = RandomWithException(funLength, skewers.GetComponent<Skewers>().Combo - 3);   //最小的Combo是3,其index是0
-            if (index == -1) { Debug.LogError("FunFoodSpawner Exception"); yield return null; }
+            if (index == -1) { Debug.LogError("FunFoodSpawner Exception"); break; }
+
             float newX = Random.Range(-xLength / 2, xLength / 2);
             float newY = Random.Range(-yLength / 2, yLength / 2);
             Vector2 position = new Vector2(newX, newY);
@@ -79,10 +83,10 @@ public class FoodSpawner : MonoBehaviour
             GameObject funFood = Instantiate(funtionalFood[index], position, Quaternion.identity);
             funFood.transform.parent = transform;           
         }
-        isFun = false;
+        isSpawningFunFood = false;
     }
 
-    int RandomWithException(int max,int except)
+    int RandomWithException(int max,int except)  //隨機生成一個和現在combo不相同的數
     {
         if (except >= max || except < 0) return -1;
 
